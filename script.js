@@ -1,13 +1,19 @@
-// Fungsi untuk mengarahkan ke WhatsApp dengan pesan otomatis
-function kirimWA() {
-    const nomorWA = "6285856638523"; // Format internasional tanpa simbol +
-    const pesan = encodeURIComponent("Halo POSTECH AJA, saya ingin checkout desain digitalnya 🛒.");
-    
-    const url = `https://wa.me/${nomorWA}?text=${pesan}`;
-    
-    // Membuka link WhatsApp di tab baru
-    window.open(url, '_blank');
-}
+// Animasi sederhana saat scroll
+window.addEventListener('scroll', function() {
+    const nav = document.querySelector('nav');
+    if (window.scrollY > 50) {
+        nav.style.background = '#1a252f';
+        nav.style.padding = '0.7rem 5%';
+    } else {
+        nav.style.background = '#2c3e50';
+        nav.style.padding = '1rem 5%';
+    }
+});
 
-// Logika sederhana untuk console (opsional)
-console.log("Website POSTECH AJA berhasil dimuat.");
+// Pesan saat tombol beli diklik
+const buyButtons = document.querySelectorAll('.btn-buy');
+buyButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        console.log("Mengarahkan ke halaman kontak...");
+    });
+});
